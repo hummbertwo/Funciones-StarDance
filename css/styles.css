@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,102 +8,79 @@
 
 html, body {
   height: 100%;
-  width: 100%;
-  overflow: hidden;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #6c63ff;
-}
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  width: 100vw;
-  height: 100vh;
-  border-radius: 0;
-  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ce03b3, #9600d1);
+  overflow-y: auto;
+  color: #1C1C1C;
 }
 
 .ticket {
-  scroll-snap-align: start;
-  flex: none;
   width: 100vw;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #6c63ff;
-  color: white;
+  background: transparent;
+}
+
+h2 {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 12px;
+  width: 100%;
+  text-align: left;
 }
 
 .ticket-card {
   background: white;
-  color: black;
+  color: #1C1C1C;
   width: 100%;
-  border-radius: 16px;
+  max-width: 360px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  margin-top: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .ticket-card img {
   width: 100%;
-  height: 160px;
+  border-radius: 12px;
+  margin-bottom: 16px;
   object-fit: cover;
 }
 
 .ticket-details {
-  padding: 20px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .ticket-details p {
-  margin: 4px 0;
+  margin: 6px 0;
+  line-height: 1.4;
 }
 
 .ticket-footer {
-  padding: 10px 20px 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .download-btn {
-  background: #6c63ff;
+  background: #420079;
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 12px 20px;
+  border-radius: 30px;
   font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
 }
 
-h2 {
-  margin-top: 10px;
-}
-
-.dots {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: white;
-  opacity: 0.4;
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.dot.active {
-  opacity: 1;
-  transform: scale(1.2);
+.download-btn:hover {
+  background: #372ecc;
 }
