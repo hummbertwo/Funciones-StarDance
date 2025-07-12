@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ce03b3, #9600d1);
+  overflow: hidden;
+  color: #1C1C1C;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ticket {
+  scroll-snap-align: start;
+  flex: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  position: relative;
+}
+
+h2 {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.ticket-card {
+  background: white;
+  color: #1C1C1C;
+  width: 100%;
+  height: 80vh; /* Toma el 100% del alto del viewport */
+  max-width: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.ticket-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.ticket-details {
+  font-size: 15px;
+}
+
+.ticket-details p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.ticket-details .section-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.ticket-details strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.ticket-footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.download-btn {
+  background: #4A3AFF;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #372ecc;
+}
+
+.dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.4;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Extra: simulate barcode style */
+.barcode {
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 16px;
+  letter-spacing: 2px;
+  color: #1c1c1c;
+}
+
+.barcode-img {
+  width: 100%;
+  height: 50px;
+  background: repeating-linear-gradient(
+    to right,
+    #000,
+    #000 2px,
+    #fff 2px,
+    #fff 4px
+  );
+  margin-top: 12px;
+  border-radius: 6px;
+}
