@@ -10,7 +10,7 @@ html, body {
   height: 100%;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom right, #ce03b3, #9600d1);
-  overflow: hidden;
+  overflow-y: auto;
   color: #1C1C1C;
 }
 
