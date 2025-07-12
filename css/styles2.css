@@ -16,7 +16,6 @@ html, body {
 
 .ticket {
   width: 100vw;
-  height: 100vh;
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
